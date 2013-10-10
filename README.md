@@ -1,7 +1,5 @@
-el-scifi
-========
-
 Easy Life for SCIFI
+========
 
 Automatic configuration with several modules:
 
