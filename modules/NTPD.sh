@@ -36,7 +36,7 @@ read
 yum install ntp ntpdate -Y
 
 #2 Copy Templates
-mv /etc/ntp.conf /etc/ntp.conf.`date +%Y%m%d-%H%M%S`
+mv /etc/ntp.conf /etc/ntp.conf.`date +%Y%m%d-%H%M%S` 2>/dev/null
 cp -pr $ModDir/NTPD/ntp.conf /etc/
 
 #3 NTPD start

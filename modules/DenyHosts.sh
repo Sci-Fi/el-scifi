@@ -36,7 +36,7 @@ yum install denyhosts -Y
 
 #2 Copy Templates
 mv /etc/denyhosts.conf /etc/denyhosts.`date +%Y%m%d-%H%M%S`
-cp -p '$ModDir'DenyHosts/denyhosts.conf  /etc/ 
+cp -p $ModDir'DenyHosts/denyhosts.conf'  /etc/ 
 
 #4
 sed -i s/LOCKTIME/$LOCKTIME/g /etc/denyhosts.conf
@@ -44,7 +44,6 @@ sed -i s/LOCKTIME/$LOCKTIME/g /etc/denyhosts.conf
 #4 Setup LogRotate
 rm /etc/logrotate.d/denyhosts
 cp -p $ModDir/DenyHosts/denyhosts.logrotate /etc/logrotate.d/denyhosts
-read
 
 #5 Start
 chkconfig denyhosts on

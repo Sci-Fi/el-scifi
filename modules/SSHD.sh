@@ -34,7 +34,7 @@ read
 yum install openssh-server -y
 
 #2
-mv /etc/ssh/sshd_config /etc/ssh/sshd_config.`date +%Y%m%d-%H%M%S`
+mv /etc/ssh/sshd_config /etc/ssh/sshd_config.`date +%Y%m%d-%H%M%S` 2>/dev/null
 cp -p $ModDir/SSHD/sshd_config /etc/ssh/
 
 #3

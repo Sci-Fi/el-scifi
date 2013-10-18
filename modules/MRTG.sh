@@ -50,7 +50,6 @@ cp -p $ModDir/MRTG/mrtg.cron /etc/cron.d/mrtg
 mkdir /var/log/mrtg
 rm /etc/logrotate.d/mrtg
 cp -p $ModDir/MRTG/mrtg.logrotate /etc/logrotate.d/mrtg
-read
 
 #5 Setup MRTG in Apache
 rm /etc/httpd/conf.d/mrtg.conf
