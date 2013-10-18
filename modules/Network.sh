@@ -21,7 +21,20 @@ cat <<-EOF
   =========================================
                 Network Module
 
-  You must do it manualy
+  You must do it manualy.
+  
+  External Inteface: $EXTINT
+            IP     : $EXTIP
+            MASK   : $EXTMASK
+            Gateway: $IGIP
+            
+  Internal Inteface: $INTINT
+            IP     : 10.0.0.1
+            MASK   : 255.0.0.2
+            
+     Search Domains: $DOMAINWIFI
+
+   
 
   Press <Enter> key
 

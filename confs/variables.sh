@@ -11,6 +11,7 @@ DOMAIN=domain.edu # Domain name
 DOMAINWIFI=wifi.domain.edu # Wifi Domain name
 FQDN=$MACHINE'.'$DOMAIN # Machine name + . + Domain name
 EXTIP=200.200.200.200 # External IP
+EXTMASK=255.255.255.0 # External IP MASK
 EXTINT=eth0 # External Interface
 INTINT=eth1 # Internal Interface
 IGNAME=InternetGateway # Internet gateway name
