@@ -30,7 +30,7 @@ cat <<-EOF
             
   Internal Inteface: $INTINT
             IP     : 10.0.0.1
-            MASK   : 255.0.0.2
+            MASK   : 255.0.0.0
             
      Search Domains: $DOMAINWIFI
 
