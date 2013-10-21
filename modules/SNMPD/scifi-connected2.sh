@@ -1,4 +1,4 @@
-#!/bin/bash                           
+#!/bin/sh                           
 # versão 20131017
 # Return the father of device
 # Cosme Corrêa

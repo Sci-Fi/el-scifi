@@ -1,4 +1,4 @@
-#!/bin/bash                           
+#!/bin/sh                           
 # versão 20130710
 # Apoio a Identificação automática do SCIFI e sua versão
 # Retorna a string com SCIFI e o código de retorno com a versão

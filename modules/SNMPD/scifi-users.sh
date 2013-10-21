@@ -1,4 +1,4 @@
-#!/bin/bash                           
+#!/bin/sh                           
 # versao 20130703
 # Consolida o nº de usuários no sistema
 # Cosme Corrêa
@@ -10,9 +10,9 @@ ERRO () {
 echo 
 echo Consolida o nº de usuários no sistema via SNMP
 echo 
-echo sintaxe:   $0  
+echo sintax:   $0  
 echo 
-echo exemplo:   $0 
+echo example:   $0 
 echo 
 echo Obs: faz uso das informações em /etc/mrtg/devices.inc
 exit

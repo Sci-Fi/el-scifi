@@ -1,4 +1,4 @@
-#!/bin/bash                           
+#!/bin/sh                           
 # versão 20131017
 # Apoio a Identificação automática do SCIFI e sua versão
 # Return a string with suversion
