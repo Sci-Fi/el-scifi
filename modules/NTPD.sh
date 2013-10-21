@@ -46,5 +46,5 @@ chkconfig ntpdate
 service ntpdate restart
 
 echo NTPD module finished
-echo Press <Enter> to exit
+echo 'Press <Enter> to exit'
 read
