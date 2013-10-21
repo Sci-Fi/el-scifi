@@ -32,7 +32,7 @@ EOF
 read
 
 #1 Install DenyHosts
-yum install denyhosts -Y
+yum install denyhosts -y
 
 #2 Copy Templates
 mv /etc/denyhosts.conf /etc/denyhosts.`date +%Y%m%d-%H%M%S`
