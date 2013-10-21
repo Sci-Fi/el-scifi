@@ -17,7 +17,6 @@
 # Uncomment for  debug
 # set -xv
 
-
 DOMINIO_INST=$DOMAIN
 RAIZ_BASE_LDAP="dc="`echo $DOMINIO_INST | sed -e 's/\./,dc=/g'`
 ORGANIZACAO="`echo $RAIZ_BASE_LDAP | sed -e 's/^dc=//; s/,dc=/./'`"

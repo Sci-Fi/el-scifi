@@ -79,7 +79,7 @@ if ! [ -a $DirTemplates$TEMPLATE ]
 	exit;
 fi
 
-# Pega nome por SNMP
+# Get name using SNMP
 #NOME=`snmpget -v 1 -c public $DISPOSITIVO sysName.0 | cut -d" " -f4-`
 NOME=$DISPOSITIVO
 PNOME=`echo $NOME | cut -d"." -f1`
