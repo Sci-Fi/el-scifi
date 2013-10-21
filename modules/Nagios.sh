@@ -27,10 +27,10 @@ cat <<-EOF
   3) SetUp Templates
   4) Setup HTTPD
   5) Setup Start
+  6) Scripts
+
 
 EOF
-read
-
 
 #1 Install Nagios
 yum  install nagios nagios-plugins-all -y
@@ -61,6 +61,10 @@ sed -i s/NAGIOSGROUP/$NAGIOSGROUP/g /etc/httpd/conf.d/nagios.conf
 chkconfig nagios on
 service nagios restart
 service httpd restart
+
+#6 Scripts
+cp -f  $ModDir/Nagios/*.sh $SCRIPTDIR
+ln -s $SCRIPTDIR/*.sh /usr/bin/
 
 echo Nagios module finished
 echo 'Press <Enter> to exit'
