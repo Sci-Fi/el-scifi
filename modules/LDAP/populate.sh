@@ -15,7 +15,7 @@
 # ...
 #
 # Uncomment for  debug
-set -xv
+# set -xv
 
 
 DOMINIO_INST=$DOMAIN
