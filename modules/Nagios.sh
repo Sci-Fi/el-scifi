@@ -28,6 +28,7 @@ cat <<-EOF
   4) Setup HTTPD
   5) Setup Start
   6) Scripts
+  7) Put InternetGateway in /etc/hosts
 
 
 EOF
@@ -65,6 +66,10 @@ service httpd restart
 #6 Scripts
 cp -f  $ModDir/Nagios/*.sh $SCRIPTDIR
 ln -s $SCRIPTDIR/*.sh /usr/bin/
+
+#7 Put InternetGateway in /etc/hosts
+sed -i s/$IGIP/'#'$IGIP/g /etc/hosts
+echo $IGIP' '$IGNAME' #'" Added by EL-SCIFI - `date +%Y%m%d-%H%M%S`" >> /etc/hosts
 
 echo Nagios module finished
 echo 'Press <Enter> to exit'

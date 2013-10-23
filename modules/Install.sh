@@ -24,6 +24,7 @@ cat <<-EOF
   2) Some utilities
   3) Create Directories
   4) Copy conf files
+  5) Some subs
 
   Press <Enter> key
 
@@ -42,8 +43,11 @@ yum install screen vim htop tree coreutils yumex setuptool authconfig glibc-comm
 mkdir -p $SCRIPTDIR
 mkdir /etc/scifi
 
-#  4) Copy conf files
+# 4) Copy conf files
 cp -f $ModDir/Install/etcscifi/* /etc/scifi/
+
+# 5) Some subs
+echo $IGNAME > /etc/scifi/scifi-connected2.txt
 
 echo Install module finished
 echo 'Press <Enter> to exit'

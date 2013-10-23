@@ -6,7 +6,7 @@
 # uncomment for debug
 #set -xv
 
-TAGS=`cat /etc/scifi/scifi-subversion.txt`
+TAGS=`cat /etc/scifi/scifi-tags.txt`
 
 echo $TAGS
 exit 0

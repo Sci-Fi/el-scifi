@@ -8,5 +8,5 @@
 
 TYPE=`cat /etc/scifi/scifi-TYPE.txt`
 
-echo $SYSTEM
+echo $TYPE
 exit 0
