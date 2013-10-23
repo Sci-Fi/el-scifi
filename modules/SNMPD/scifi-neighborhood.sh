@@ -6,7 +6,7 @@
 # uncomment for debug
 #set -xv
 
-NEIGH=''
+NEIGH=`cat /etc/scifi/scifi-neighborhood.txt`
 
 echo $NEIGH
 exit 0

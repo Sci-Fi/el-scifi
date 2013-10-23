@@ -6,7 +6,8 @@
 # uncomment for debug
 #set -xv
 
-FATHER=''
+#FATHER=''
+FATHER=`cat /etc/scifi/scifi-connected2.txt`
 
 echo $FATHER
 exit 0

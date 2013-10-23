@@ -1,6 +1,6 @@
 #!/bin/sh                           
 # versao 20130703
-# Consolida o nº de usuários no sistema
+# # of system users
 # Cosme Corrêa
 # cosmefc@id.uff.br
 #  Descomente para debug
@@ -8,13 +8,13 @@
 
 ERRO () {
 echo 
-echo Consolida o nº de usuários no sistema via SNMP
+echo '# of system users'
 echo 
 echo sintax:   $0  
 echo 
 echo example:   $0 
 echo 
-echo Obs: faz uso das informações em /etc/mrtg/devices.inc
+echo Obs: using /etc/mrtg/devices.inc
 exit
 }
 
@@ -27,14 +27,13 @@ if [ `head -1 /var/www/mrtg/"$1"/"$1"_usu.log | cut -d' ' -f3` != '-1' ]
 	then
 	echo `head -2 /var/www/mrtg/"$1"/"$1"_usu.log | tail -1 | cut -d' ' -f2`
 fi
-# http://stackoverflow.com/questions/1819187/test-a-file-date-with-bash
 }
 
-# Definindo Variáveis
+# Variables
 TOTAL=0
 COMMUNITY=public
 
-# Testa se o nº de parâmetros for diferente de 0
+# Test # of parametres
 if [ "$#" -ne "0" ]
 	then
 	echo 'Erro, nº errado de parâmetros';
@@ -42,18 +41,25 @@ if [ "$#" -ne "0" ]
 	exit;
 fi
 
-# Gera lista de APs
-LISTA=`cut -d'/' -f5 /etc/mrtg/devices.inc | grep ap`
-
-for AP in $LISTA
-do
-	AP=`expr substr $AP 1 6`
-#	USU=`USUSNMP $COMMUNITY $AP`
-	USU=`USUMRTG $AP`
-	USU=${USU/' '/}
-	TOTAL=$(( TOTAL + USU ))
-done
-
+if [ "`/usr/share/scifi/scripts/scifi-type.sh`" = "CONTROLLER" ]
+	then
+	# make APs list
+	LISTA=`cut -d'/' -f5 /etc/mrtg/devices.inc | grep ap`
+	for AP in $LISTA
+		do
+		AP=`expr substr $AP 1 6`
+#		USU=`USUSNMP $COMMUNITY $AP`
+		USU=`USUMRTG $AP`
+		USU=${USU/' '/}
+		TOTAL=$(( TOTAL + USU ))
+		done
+	else
+#	export PATH=/bin:/sbin:/usr/bin:/usr/sbin;
+	# total of connected clients,  2 wireless interfaces
+	nsta1=$(iw wlan0 station dump | grep -c Station)
+	nsta2=$(iw wlan0-1 station dump | grep -c Station)
+	TOTAL=$(($nsta1+$nsta2))
+fi
 echo $TOTAL
 exit $TOTAL
 

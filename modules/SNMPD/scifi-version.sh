@@ -8,7 +8,8 @@
 #set -xv
 
 SYSTEM='SCIFI'
-VERSION=12
+#VERSION=12
+VERSION=`cat /etc/scifi/scifi-version.txt`
 
 echo $SYSTEM
 exit $VERSION

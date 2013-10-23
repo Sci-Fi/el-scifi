@@ -7,7 +7,7 @@
 #  Descomente para debug
 #set -xv
 
-SUBVERSION=0
+SUBVERSION=`cat /etc/scifi/scifi-subversion.txt`
 
 echo $SUBVERSION
 exit $SUBVERSION

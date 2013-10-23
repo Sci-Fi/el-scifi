@@ -6,7 +6,7 @@
 # uncomment for debug
 #set -xv
 
-TAGS='CONTROLLER LINUX'
+TAGS=`cat /etc/scifi/scifi-subversion.txt`
 
 echo $TAGS
 exit 0

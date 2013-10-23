@@ -6,7 +6,7 @@
 # uncomment for debug
 #set -xv
 
-COOR='-22.894442,-43.118939,12'
+COOR=`cat /etc/scifi/scifi-coordinates.txt`
 
 echo $COOR
 exit 0

@@ -6,7 +6,7 @@
 # uncomment for debug
 #set -xv
 
-TYPE='CONTROLLER'
+TYPE=`cat /etc/scifi/scifi-TYPE.txt`
 
 echo $SYSTEM
 exit 0
