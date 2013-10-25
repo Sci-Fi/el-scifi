@@ -30,6 +30,8 @@ cat <<-EOF
   6) Scripts
   7) Put InternetGateway in /etc/hosts
 
+ 
+  Press <Enter> key
 
 EOF
 
@@ -48,10 +50,10 @@ sed -i s/IGIP/$IGIP/g /etc/nagios/routers/InternetGateway.cfg
 rm /etc/httpd/conf.d/nagios.conf
 case "$NAGIOSAUTH" in
     [yY] )
-      cp $ModDir/Nagios/nagios.users.conf /etc/httpd/conf.d/nagios.conf
+      cp $ModDir/Nagios/nagios-users.conf /etc/httpd/conf.d/nagios.conf
       ;;
     [gG] )
-      cp $ModDir/Nagios/nagios.group.conf /etc/httpd/conf.d/nagios.conf
+      cp $ModDir/Nagios/nagios-group.conf /etc/httpd/conf.d/nagios.conf
       ;;
 esac
 sed -i s/LDAPSERVER/$LDAPSERVER/g /etc/httpd/conf.d/nagios.conf
