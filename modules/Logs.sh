@@ -33,7 +33,6 @@ read
 mv /etc/rsyslog.conf /etc/rsyslog.conf.`date +%Y%m%d-%H%M%S`
 cp -p "$ModDir"Logs/rsyslog.conf /etc/
 
-
 #1 Install LogRotate
 echo Installing LogRotate
 yum install logrotate -y 
@@ -42,7 +41,6 @@ yum install logrotate -y
 mv /etc/logrotate.conf /etc/logrotate.conf.`date +%Y%m%d-%H%M%S`
 cp $ModDir/Logs/logrotate.conf /etc/
 sed -i s/DURATION/$DURATION/g /etc/logrotate.conf
-
 
 echo LogRotate module finished
 echo 'Press <Enter> to exit'

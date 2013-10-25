@@ -41,5 +41,7 @@ cat <<-EOF
 EOF
 
 read
-exit `nm-connection-editor`
+nm-connection-editor
+echo  'Press <Enter> key'
+read
 

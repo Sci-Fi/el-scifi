@@ -33,7 +33,8 @@ EOF
 read
 
 #1 Install NTPD
-yum install ntp ntpdate -y
+#yum install ntp ntpdate -y
+yum install ntp -y
 
 #2 Copy Templates
 mv /etc/ntp.conf /etc/ntp.conf.`date +%Y%m%d-%H%M%S` 2>/dev/null
@@ -42,8 +43,8 @@ cp -pr $ModDir/NTPD/ntp.conf /etc/
 #3 NTPD start
 chkconfig ntpd
 service ntpd restart
-chkconfig ntpdate
-service ntpdate restart
+#chkconfig ntpdate
+#service ntpdate restart
 
 echo NTPD module finished
 echo 'Press <Enter> to exit'

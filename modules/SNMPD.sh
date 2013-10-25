@@ -19,7 +19,7 @@ cat <<-EOF
   =========================================
   |           Easy Life for SCIFI         |
   =========================================
-                  LDAP Module
+                  SNMPD Module
 
   This module will:
   1) Install SNMPD
@@ -40,8 +40,10 @@ mv /etc/snmp/snmpd.conf /etc/snmp/snmpd.`date +%Y%m%d-%H%M%S`
 cp -p $ModDir/SNMPD/snmpd.conf /etc/snmp/
 
 #3 Subs
-sed -i s/LDAPPRIMARYDISPLAYNAME/$LDAPPRIMARYDISPLAYNAME/g /etc/snmp/snmpd.conf
+sed -i s/LDAPPRIMARYDISPLAYNAME/"$LDAPPRIMARYDISPLAYNAME"/g /etc/snmp/snmpd.conf
 sed -i s/LDAPPRIMARYUIDMAIL/$LDAPPRIMARYUIDMAIL/g /etc/snmp/snmpd.conf
+sed -i s/MACHINE/$MACHINE/g /etc/snmp/snmpd.conf
+sed -i s/SYSLOCATION/"$SYSLOCATION"/g /etc/snmp/snmpd.conf
 
 
 

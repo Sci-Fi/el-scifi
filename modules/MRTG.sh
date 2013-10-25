@@ -48,7 +48,7 @@ cp -p $ModDir/MRTG/mrtg.cron /etc/cron.d/mrtg
 
 #4 Setup Log
 mkdir /var/log/mrtg
-rm /etc/logrotate.d/mrtg
+rm /etc/logrotate.d/mrtg 2>/dev/null
 cp -p $ModDir/MRTG/mrtg.logrotate /etc/logrotate.d/mrtg
 
 #5 Setup MRTG in Apache
@@ -77,7 +77,7 @@ service httpd restart
 
 #8 Scripts
 cp -f  $ModDir/MRTG/*.sh $SCRIPTDIR
-ln -s $SCRIPTDIR/*.sh /usr/bin/
+ln -s $SCRIPTDIR/*.sh /usr/bin/ 2>/dev/null
 
 
 echo MRTG module finished

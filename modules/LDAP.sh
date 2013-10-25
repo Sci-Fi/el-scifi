@@ -57,7 +57,7 @@ cd /usr/bin
 ln -s $SCRIPTDIR'fazbkp.sh' .
 ln -s $SCRIPTDIR'restauraLDAP.sh' .
 ln -s $SCRIPTDIR'ldap.sh' .
-mv /etc/openldap/DB_CONFIG.example /etc/openldap/DB_CONFIG.example.`date +%Y%m%d-%H%M%S`
+mv /etc/openldap/DB_CONFIG.example /etc/openldap/DB_CONFIG.example.`date +%Y%m%d-%H%M%S` 2>/dev/null
 cp $ModDir/LDAP/DB_CONFIG.example /etc/openldap/
 
 #2 Create BKP structure
@@ -73,7 +73,7 @@ cp -p $ModDir/LDAP/schema/* /etc/openldap/schema
 
 #5 Setup slapd.conf
 mv /etc/openldap/slapd.d /etc/openldap/slapd.d.`date +%Y%m%d-%H%M%S`
-mv /etc/openldap/slapd.conf /etc/openldap/slapd.conf.`date +%Y%m%d-%H%M%S`
+mv /etc/openldap/slapd.conf /etc/openldap/slapd.conf.`date +%Y%m%d-%H%M%S` 2>/dev/null
 cp -p $ModDir/LDAP/slapd.conf /etc/openldap/
 chmod 640 /etc/openldap/slapd.conf
 chown ldap:ldap /etc/openldap/slapd.conf

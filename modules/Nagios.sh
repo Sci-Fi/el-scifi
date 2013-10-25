@@ -48,10 +48,10 @@ sed -i s/IGIP/$IGIP/g /etc/nagios/routers/InternetGateway.cfg
 rm /etc/httpd/conf.d/nagios.conf
 case "$NAGIOSAUTH" in
     [yY] )
-      cp $ModDir/NAGIOS/nagios.users.conf /etc/httpd/conf.d/nagios.conf
+      cp $ModDir/Nagios/nagios.users.conf /etc/httpd/conf.d/nagios.conf
       ;;
     [gG] )
-      cp $ModDir/NAGIOS/nagios.group.conf /etc/httpd/conf.d/nagios.conf
+      cp $ModDir/Nagios/nagios.group.conf /etc/httpd/conf.d/nagios.conf
       ;;
 esac
 sed -i s/LDAPSERVER/$LDAPSERVER/g /etc/httpd/conf.d/nagios.conf
@@ -65,7 +65,7 @@ service httpd restart
 
 #6 Scripts
 cp -f  $ModDir/Nagios/*.sh $SCRIPTDIR
-ln -s $SCRIPTDIR/*.sh /usr/bin/
+ln -s $SCRIPTDIR/*.sh /usr/bin/ 2>/dev/null
 
 #7 Put InternetGateway in /etc/hosts
 sed -i s/$IGIP/'#'$IGIP/g /etc/hosts

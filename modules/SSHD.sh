@@ -47,12 +47,12 @@ case "$SSHDAUTH" in
 		ALLOWAUTH="AllowUsers "$SSHDUSERSP
 		;;
 esac
-sed -i s/ALLOWAUTH/$ALLOWAUTH/g /etc/ssh/sshd_config
+sed -i s/ALLOWAUTH/"$ALLOWAUTH"/g /etc/ssh/sshd_config
 
 #4
 chkconfig sshd on
 service sshd restart
 
 echo SSHD module finished
-echo Press <Enter> to exit
+echo 'Press <Enter> to exit'
 read

@@ -35,7 +35,7 @@ read
 # Install Firewall
 wget http://www.fwbuilder.org/PACKAGE-GPG-KEY-fwbuilder.asc
 rpm --import PACKAGE-GPG-KEY-fwbuilder.asc
-cp /modules/Install/fwbuilder.repo /etc/yum.repos.d/fwbuilder.repo
+cp -f $ModDir/Firewall/fwbuilder.repo /etc/yum.repos.d/fwbuilder.repo
 yum install fwbuilder -y
 
 cp -p $ModDir/Firewall/firewall /etc/init.d/

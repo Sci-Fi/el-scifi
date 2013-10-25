@@ -41,7 +41,7 @@ cp -rp $ModDir/Postfix/sasl_passwd /etc/postfix/
 chmod 640 /etc/postfix/sasl_passwd
 
 #3
-sed -i s/RELAYHOST/$RELAYHOST/g /etc/postfix/main
+sed -i s/RELAYHOST/$RELAYHOST/g /etc/postfix/main.cf
 sed -i s/RELAYHOST/$RELAYHOST/g /etc/postfix/sasl_passwd
 sed -i s/RELAYACC/$RELAYACC/g /etc/postfix/sasl_passwd
 sed -i s/RELAYPASSWD/$RELAYPASSWD/g /etc/postfix/sasl_passwd

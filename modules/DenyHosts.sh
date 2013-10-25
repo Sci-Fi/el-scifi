@@ -50,5 +50,5 @@ chkconfig denyhosts on
 service denyhosts restart
 
 echo DenyHosts module finished
-echo Press <Enter> to exit
+echo 'Press <Enter> to exit'
 read
