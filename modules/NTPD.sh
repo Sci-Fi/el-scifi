@@ -33,7 +33,7 @@ EOF
 read
 
 #1 Install NTPD
-yum install ntp ntpdate -Y
+yum install ntp ntpdate -y
 
 #2 Copy Templates
 mv /etc/ntp.conf /etc/ntp.conf.`date +%Y%m%d-%H%M%S` 2>/dev/null
