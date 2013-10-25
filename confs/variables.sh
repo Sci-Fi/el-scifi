@@ -6,9 +6,9 @@ SCRIPTDIR=/usr/share/scifi/scripts/ # Where are scripts
 # SELinux
 SELPOL=permissive # enforcing | permissive | disabled
 # Network
-MACHINE=machine # Machine name 
-DOMAIN=domain.edu # Domain name 
-DOMAINWIFI=wifi.domain.edu # Wifi Domain name
+MACHINE=wifi # Machine name 
+DOMAIN=uff.br # Domain name 
+DOMAINWIFI=wifi.uff.br # Wifi Domain name
 FQDN=$MACHINE'.'$DOMAIN # Machine name + . + Domain name
 EXTIP=200.200.200.200 # External IP
 EXTMASK=255.255.255.0 # External IP MASK
@@ -42,8 +42,8 @@ MONITORIXAUTH=y # MONITORIX authenticated - If you have to authenticate to see (
 MONITORIXGROUP=NetAdmins # MONITORIX authenticated group
 # Radius
 RADIUSSERVER=127.0.0.1 # Radius server
-RADIUSDOMAIN=domain.edu # Radius domain
-RADIUSACCOUNT='reader-radius' # Radius account
+RADIUSDOMAIN=uff.br # Radius domain
+RADIUSACCOUNT='reader-radius' # Radius account - without use nowadays
 RADIUSACCPASS=Aspargos # Radius account password
 RADIUSPASS=Taioba # Radius password
 # Shibboleth
@@ -57,7 +57,7 @@ SSHDUSERS='cosmefc johndoe' # users list with ssh right
 # Denyhosts
 LOCKTIME=4h # Deny Hosts lock time
 # Postfix
-RELAYHOST=mxrelay.dom.org
+RELAYHOST=mxrelay.uff.br
 RELAYACC=manezinho
 RELAYPASSWD=segredo
 
