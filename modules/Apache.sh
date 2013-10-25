@@ -23,7 +23,9 @@ cat <<-EOF
 
   This module will:
   1) Install Apache
-  1) Start Apache
+  2) Start Apache
+
+    Press <Enter> key
 
 EOF
 read

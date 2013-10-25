@@ -23,6 +23,8 @@ cat <<-EOF
 
   You must do it manualy.
   
+           Hostname: $MACHINE.$DOMAINWIFI
+  
   External Inteface: $EXTINT
             IP     : $EXTIP
             MASK   : $EXTMASK
@@ -32,16 +34,17 @@ cat <<-EOF
             IP     : 10.0.0.1
             MASK   : 255.0.0.0
             
-     Search Domains: $DOMAINWIFI
+     Search Domains: $DOMAINWIFI,$DOMAIN
 
    
 
   Press <Enter> key
 
 EOF
-
+echo "10.0.0.1 $MACHINE.$DOMAINWIFI" >> /etc/hosts
 read
 nm-connection-editor
+system-config-network
 echo  'Press <Enter> key'
 read
 

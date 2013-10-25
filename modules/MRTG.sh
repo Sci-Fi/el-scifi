@@ -30,6 +30,9 @@ cat <<-EOF
   6) Setup MRTG
   7) Scripts
   8) Start Apache
+  
+  Press <Enter> key
+
 EOF
 read
 

@@ -90,11 +90,10 @@ sed -i s/LDAPADMPASSWD/$LDAPADMPASSWD/g $SCRIPTDIR/ldap.sh
 authconfig --passalgo=sha512 --enableldap --enableldapauth --ldapserver=$LDAPSERVER --ldapbasedn=$LDAPSUFIX --disablesmartcard --enableforcelegacy --enablemkhomedir --updateall
 
 #8 Setup log
-mv /etc/rsyslog.d/slapd.conf /etc/rsyslog.d/slapd.conf.`date +%Y%m%d-%H%M%S`
+mv /etc/rsyslog.d/slapd.conf /etc/rsyslog.d/slapd.conf.`date +%Y%m%d-%H%M%S` 2>//dev/null
 cp -p $ModDir/LDAP/slapd.rsyslog /etc/rsyslog.d/slapd.conf
 touch /var/log/slapd.log
 service rsyslog restart
-rm /etc/logrotate.d/slapd 
 cp -p $ModDir/LDAP/slapd.logrotate /etc/logrotate.d/slapd
 
 #9 Start

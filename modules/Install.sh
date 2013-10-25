@@ -46,9 +46,6 @@ mkdir /etc/scifi
 # 4) Copy conf files
 cp -f $ModDir/Install/etcscifi/* /etc/scifi/
 
-# 5) Some subs
-echo $IGNAME > /etc/scifi/scifi-connected2.txt
-
 echo Install module finished
 echo 'Press <Enter> to exit'
 read

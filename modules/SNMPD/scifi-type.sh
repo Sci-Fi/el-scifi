@@ -6,7 +6,7 @@
 # uncomment for debug
 #set -xv
 
-TYPE=`cat /etc/scifi/scifi-TYPE.txt`
+TYPE=`cat /etc/scifi/scifi-type.txt`
 
 echo $TYPE
 exit 0

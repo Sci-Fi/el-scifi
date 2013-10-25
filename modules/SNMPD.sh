@@ -27,6 +27,7 @@ cat <<-EOF
   3) Setup SNMPD
   4) Star processes
   5) Scripts
+  6) Some subs
 
   Press <Enter> key
 EOF
@@ -45,8 +46,6 @@ sed -i s/LDAPPRIMARYUIDMAIL/$LDAPPRIMARYUIDMAIL/g /etc/snmp/snmpd.conf
 sed -i s/MACHINE/$MACHINE/g /etc/snmp/snmpd.conf
 sed -i s/SYSLOCATION/"$SYSLOCATION"/g /etc/snmp/snmpd.conf
 
-
-
 #4 Star processes
 chkconfig snmpd on
 service snmpd start
@@ -54,6 +53,12 @@ service snmpd start
 #5 Scripts
 cp -f  $ModDir/SNMPD/*.sh $SCRIPTDIR
 ln -s $SCRIPTDIR/*.sh /usr/bin/
+
+#6 Some subs
+echo $IGNAME > /etc/scifi/scifi-connected2.txt
+echo CONTROLLER > /etc/scifi/scifi-type.txt
+echo $IGNAME > /etc/scifi/scifi-neighborhood.txt
+
 
 echo SNMPD module finished
 echo 'Press <Enter> to exit'

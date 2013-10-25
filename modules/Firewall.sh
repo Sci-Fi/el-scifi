@@ -44,6 +44,8 @@ cp -p $ModDir/Firewall/FW-SCIFI.fwb /usr/share/scifi/scripts
 
 #4
 chkconfig firewall on
+chkconfig iptables 0ff
+chkconfig ip6tables 0ff
 #service firewall start
 
 cat <<-EOF

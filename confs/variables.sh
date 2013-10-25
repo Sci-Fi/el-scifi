@@ -15,7 +15,7 @@ EXTMASK=255.255.255.0 # External IP MASK
 EXTINT=eth0 # External Interface
 INTINT=eth1 # Internal Interface
 IGNAME=InternetGateway # Internet gateway name
-IGIP=192.168.122.229 # Internet gateway IP
+IGIP=192.168.122.1 # Internet gateway IP
 # SNMPD
 SYSLOCATION='Data Center'
 # LDAP
