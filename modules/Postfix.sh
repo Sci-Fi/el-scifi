@@ -27,6 +27,8 @@ cat <<-EOF
   3) Setup
   5) Start
 
+  Press <Enter> key
+
 EOF
 read
 
@@ -52,5 +54,5 @@ chkconfig postfix on
 service postfix restart
 
 echo Postfix module finished
-echo Press <Enter> to exit
+echo 'Press <Enter> to exit'
 read

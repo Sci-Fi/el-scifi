@@ -30,6 +30,7 @@ cat <<-EOF
   6) Some subs
 
   Press <Enter> key
+  
 EOF
 read
 

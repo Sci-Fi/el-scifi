@@ -30,7 +30,6 @@ cat <<-EOF
   6) Scripts
   7) Put InternetGateway in /etc/hosts
 
- 
   Press <Enter> key
 
 EOF

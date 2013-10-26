@@ -29,6 +29,8 @@ cat <<-EOF
   5) Setup Apache
   6) Setup NTPD
 
+  Press <Enter> key
+
 EOF
 read
 

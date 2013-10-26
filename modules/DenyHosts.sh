@@ -28,6 +28,8 @@ cat <<-EOF
   4) Setup Logrotate
   5) Setup Start
 
+  Press <Enter> key
+
 EOF
 read
 

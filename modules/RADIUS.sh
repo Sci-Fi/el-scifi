@@ -28,6 +28,8 @@ cat <<-EOF
   4) Setup
   5) Start
 
+  Press <Enter> key
+  
 EOF
 read
 
