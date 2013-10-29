@@ -6,7 +6,7 @@
 # uncomment for debug
 #set -xv
 
-FATHER=`cat /etc/scifi/scifi-connected2.txt`
+FATHER=`cat /etc/scifi/scifi-connected2.txt 2>/dev/null`
 
 #Must test if there is a lan swith port in use
 

@@ -6,7 +6,7 @@
 # uncomment for debug
 #set -xv
 
-TAGS=`cat /etc/scifi/scifi-tags.txt`
+TAGS=`cat /etc/scifi/scifi-tags.txt 2>/dev/null`
 
 echo $TAGS
 exit 0

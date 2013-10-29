@@ -62,4 +62,3 @@ if [ "`/usr/share/scifi/scripts/scifi-type.sh`" = "CONTROLLER" ]
 fi
 echo $TOTAL
 exit $TOTAL
-

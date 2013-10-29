@@ -15,7 +15,7 @@ CurDir='/usr/share/el-scifi'
 #ModDir=$CurDir'/modules/'
 CFGFile=$CurDir'/confs/variables.sh'
 Start=`date +%Y%m%d-%H%M%S`
-Steps='Install Variables SELinux Network SNMPD Logs LDAP Apache Monitorix DNSMasq MRTG Nagios RADIUS Firewall SSHD DenyHosts NTPD Postfix JBossAS ProgreSQL SCIFIWeb SCIFIKernel Exit' 
+    Steps='Variables Install SELinux Network SNMPD Logs LDAP Apache Monitorix DNSMasq MRTG Nagios RADIUS Firewall SSHD DenyHosts NTPD Postfix ProgreSQL JBossAS SCIFIAPI SCIFIWeb SCIFIKernel Exit' 
 while true ; do
   clear
   . $CFGFile

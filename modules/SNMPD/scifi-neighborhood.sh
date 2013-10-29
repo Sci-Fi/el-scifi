@@ -6,7 +6,7 @@
 # uncomment for debug
 #set -xv
 
-NEIGH=`cat /etc/scifi/scifi-neighborhood.txt`
+NEIGH=`cat /etc/scifi/scifi-neighborhood.txt 2>/dev/null`
 
 echo $NEIGH
 exit 0

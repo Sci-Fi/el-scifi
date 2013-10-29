@@ -1,0 +1,1 @@
+../SNMPD/scifi-connected2.sh

@@ -7,8 +7,8 @@ It defines a gateway/server with a lot of features for a medium/big wireless net
 Automatic configuration with several modules:
 
 
-    Install
     Variables
+    Install
     SELinux
     Network
     SNMPD
@@ -25,7 +25,8 @@ Automatic configuration with several modules:
     DenyHosts
     NTPD
     Postfix
-    JBossAS
     ProgreSQL
+    JBossAS
+    SCIFIAPI
     SCIFIWeb
     SCIFIKernel
