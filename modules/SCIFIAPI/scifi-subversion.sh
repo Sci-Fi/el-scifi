@@ -1,1 +1,0 @@
-../SNMPD/scifi-subversion.sh

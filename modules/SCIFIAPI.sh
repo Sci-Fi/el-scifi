@@ -23,8 +23,9 @@ cat <<-EOF
 
   This module will:
   1) Copy scripts
-  2) Copy Templates
-
+  2) Create links
+  3) Some setup
+  
 
   Press <Enter> key
 
@@ -32,25 +33,14 @@ EOF
 read
 
 #1
-yum install postfix -y
+cp -rp $ModDir/SCIFIAPI /usr/share/scifi/
 
-#2
-mv -p /etc/postfix/main.cf /etc/postfix/maif.cf.`date +%Y%m%d-%H%M%S`
-mv -p /etc/postfix/sasl_passwd /etc/postfix/sasl_passwd.`date +%Y%m%d-%H%M%S`
-cp -rp $ModDir/Postfix/main.cf /etc/postfix/
-cp -rp $ModDir/Postfix/sasl_passwd /etc/postfix/
-chmod 640 /etc/postfix/sasl_passwd
+#2 
+ln -s /usr/share/scifi/SCIFIAPI/current/up-ap.sh /usr/share/scifi/scripts/
+ln -s $SCRIPTDIR/up-ap.sh /usr/bin/
 
 #3
-sed -i s/RELAYHOST/$RELAYHOST/g /etc/postfix/main.cf
-sed -i s/RELAYHOST/$RELAYHOST/g /etc/postfix/sasl_passwd
-sed -i s/RELAYACC/$RELAYACC/g /etc/postfix/sasl_passwd
-sed -i s/RELAYPASSWD/$RELAYPASSWD/g /etc/postfix/sasl_passwd
-postmap /etc/postfix/sasl_passwd
-
-#4
-chkconfig postfix on
-service postfix restart
+chmod 700 /usr/share/scifi/SCIFAPI/*
 
 echo SCIFIAPI module finished
 echo 'Press <Enter> to exit'
