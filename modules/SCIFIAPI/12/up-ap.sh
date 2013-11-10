@@ -51,5 +51,10 @@ if [ "`/usr/share/scifi/scripts/scifi-type.sh`" = "CONTROLLER" ]
 #	restart snmpd
 	/etc/init.d/snmpd stop
 	/etc/init.d/snmpd start
+#	legacy
+#	if exist a directory /etc/scripts
+#	  preserv
+#	  create a link to /usr/share/scofo/scripts
+#	fi
 fi
 exit 0 
