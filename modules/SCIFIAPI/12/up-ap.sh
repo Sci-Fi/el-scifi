@@ -54,7 +54,11 @@ if [ "`/usr/share/scifi/scripts/scifi-type.sh`" = "CONTROLLER" ]
 #	legacy
 #	if exist a directory /etc/scripts
 #	  preserv
-#	  create a link to /usr/share/scofo/scripts
+#	  create a link to /usr/share/scifi/scripts
 #	fi
+	if [ ! -L "/etc/scripts" ]; then
+	    mv /etc/scripts /etc/scripts.`date +%Y%m%d-%H%M%S` 2>/dev/null
+	    ln -s /usr/share/scifi/scripts /etc/scripts
+	fi
 fi
-exit 0 
+exit 

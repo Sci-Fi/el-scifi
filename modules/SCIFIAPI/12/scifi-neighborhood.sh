@@ -6,7 +6,8 @@
 # uncomment for debug
 #set -xv
 
-NEIGH=`cat /etc/scifi/scifi-neighborhood.txt 2>/dev/null`
-
+logger 'SCIFI - getting number of neighboring cells'
+NEIGH=`cat /tmp/cell_macs.txt 2>/dev/null`
+n=$(grep -o , /tmp/cell_macs.txt | wc -l)
 echo $NEIGH
-exit 0
+exit $n
