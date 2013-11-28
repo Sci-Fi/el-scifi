@@ -44,7 +44,7 @@ DWDEVICE=`echo $UPDEVICE | tr [:upper:] [:lower:]`
 TEMPLATE=$2
 ForceFlag=$3
 COMMUNITY=public
-# Is this a SCIFI devive?
+# Is this a SCIFI device?
 [ "$SCIFIlabel" != "`snmpget -v 2c -c $COMMUNITY $DEVICE $SCIFIlabelOID | cut -d' ' -f4-`" ] && ERRO "This is not a SCIFI device"
 read
 # Is this version ok?
@@ -62,7 +62,6 @@ read
 [ -a $DirTemplates$TEMPLATE ] || ERRO "Model '$TEMPLATE' does not exist"
 
 # Copy template
-# Arquivo de Configuração #
 CONFILE=$DirConfAPs$DWDEVICE'.cfg'
 
 # Copia modelo
@@ -79,5 +78,5 @@ sed -i s/CONNECTED2/$CONNECTED2/g $CONFILE
 
 
 
-# Create groups
+# Create groups using TAGS
 # TO DO
