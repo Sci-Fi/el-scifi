@@ -26,7 +26,8 @@ cat <<-EOF
   2) Compatibility setup
   3) Copy Templates
   4) Setup
-  5) Start
+  5) Logs
+  6) Start
 
   Press <Enter> key
   
@@ -51,7 +52,14 @@ sed -i s/LDAPSERVER/$LDAPSERVER/g /etc/raddb/modules/ldap
 sed -i s/LDAPSUFIX/$LDAPSUFIX/g /etc/raddb/modules/ldap
 sed -i s/RADIUSPASS/$RADIUSPASS/g /etc/raddb/clients.conf
 
-#4
+#5
+sed -i s/4/$DURATION/g /etc/logrotate.d/radiusd
+sed -i s/monthly/weekly/g /etc/logrotate.d/radiusd
+
+
+
+
+#6
 chkconfig radiusd on
 service radiusd restart
 
