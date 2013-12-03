@@ -62,4 +62,6 @@ LOCKTIME=4h # Deny Hosts lock time
 RELAYHOST=mxrelay.uff.br
 RELAYACC=manezinho
 RELAYPASSWD=segredo
+# Tuned
+TUNEDPROFILE=throughput-performance # throughput-performance | latency-performance | virtual-guest | ...
 
