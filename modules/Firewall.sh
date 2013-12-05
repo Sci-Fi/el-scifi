@@ -24,7 +24,8 @@ cat <<-EOF
   1) Install packets for FirewallB
   2) Setup FirewallB
   3) Install FW
-  4) Start
+  4) Setup log
+  5) Start
 
   Press <Enter> key
 
@@ -43,6 +44,11 @@ cp -p $ModDir/Firewall/FW-SCIFI.fw /etc/init.d/
 cp -p $ModDir/Firewall/FW-SCIFI.fwb /usr/share/scifi/scripts
 
 #4
+rm /etc/rsyslog.d/iptables 2>//dev/null 
+cp -p $ModDir/Firewall/iptables.rsyslog /etc/rsyslog.d/iptables
+touch /var/log/iptables.log
+
+#5
 chkconfig firewall on
 chkconfig iptables 0ff
 chkconfig ip6tables 0ff

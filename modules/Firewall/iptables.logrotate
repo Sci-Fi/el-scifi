@@ -1,0 +1,12 @@
+# /etc/logrotate.d/iptables
+#
+# Rotate iptables log file.
+#
+# Cosme Corrêa
+
+/var/log/iptables.log {
+compress
+delaycompress
+ifempty
+}
+
