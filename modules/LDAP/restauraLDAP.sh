@@ -57,6 +57,7 @@ mv /var/lib/ldap /var/lib/ldap.$INICIO
 
 echo "Criando novo diretorio"
 mkdir /var/lib/ldap
+chmod 770 /var/lib/ldap
 echo "Copiando DB_CONFIG..."
 cp /etc/openldap/DB_CONFIG.example /var/lib/ldap/DB_CONFIG
 echo "Checando permissoes..."

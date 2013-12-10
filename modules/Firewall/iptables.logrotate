@@ -1,12 +1,16 @@
-# /etc/logrotate.d/iptables
 #
 # Rotate iptables log file.
 #
 # Cosme Corrêa
 
 /var/log/iptables.log {
-compress
-delaycompress
-ifempty
+  compress
+  delaycompress
+  ifempty
+  missingok
+  sharedscripts
+  postrotate
+        /sbin/service rsyslog reload > /dev/null 2>/dev/null || true
+  endscript
 }
 

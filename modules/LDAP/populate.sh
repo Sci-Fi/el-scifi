@@ -274,6 +274,7 @@ EOF
 # 4- Ajusta as permissões
 chown -R ldap:ldap /var/lib/ldap /etc/openldap/slapd.conf
 chmod 600 /etc/openldap/slapd.conf /var/lib/ldap/*
+chmod 770 /var/lib/ldap/
 
 # 5- Reinicia o LDAP
 /sbin/service slapd start
